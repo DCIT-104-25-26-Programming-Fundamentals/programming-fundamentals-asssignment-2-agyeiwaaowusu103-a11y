@@ -32,8 +32,63 @@
 //   Enter a number to check: 13
 //   13 is a Fibonacci number.
 //
-//   Enter a number to check: 20
-//   20 is NOT a Fibonacci number.
+// #include <iostream>
+using namespace std;
+
+// PART A: Function to print first N terms
+#include <iostream>
+using namespace std;
+
+// PART A: Function to print the first 'n' Fibonacci numbers
+void printFibonacci(int n) {
+    if (n <= 0) return;
+
+    long long a = 0, b = 1;
+    for (int i = 0; i < n; ++i) {
+        cout << a << " ";
+        long long next = a + b;
+        a = b;
+        b = next;
+    }
+    cout << endl;
+}
+
+
+// PART B: Function to check if a number is in the sequence
+bool isFibonacci(long long num) {  //  Lowercase 'long'
+    long long a = 0, b = 1;
+    while (a < num) {
+        long long next = a + b;
+        a = b;
+        b = next;
+    }
+    return a == num;
+}
+    
+
+
+
+int main() {
+    // Part A Test
+    int n;
+    cout << "How many terms? ";
+    cin >> n;
+    printFibonacci(n);
+
+    // Part B Test
+    long long num;
+    cout << "Enter a number to check: ";
+    cin >> num;
+    if (isFibonacci(num)) {
+        cout << num << " belongs to the Fibonacci sequence!" << endl;
+    } else {
+        cout << num << " does NOT belong to the Fibonacci sequence." << endl;
+    }
+
+    return 0;
+}
+//  
+
 //
 // -----------------------------------------------------------------------------
 // REQUIREMENTS
