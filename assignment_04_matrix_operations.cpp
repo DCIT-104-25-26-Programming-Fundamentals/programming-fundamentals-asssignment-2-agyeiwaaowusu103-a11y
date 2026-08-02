@@ -65,3 +65,54 @@
 #include <string>
 using namespace std;
 
+#include <iostream>
+using namespace std;
+
+// Function to transpose and display a matrix
+void transposeMatrix(int matrix[10][10], int rows, int cols) {
+    cout << "Transposed Matrix:" << endl;
+    for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}void transposeMatrix(int matrix[10][10], int rows, int cols) {
+    cout << "Transposed Matrix:" << endl;
+    for (int j = 0; j < cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int rows, cols;
+    int matrix[10][10];
+// Call transpose function
+    transposeMatrix(matrix, rows, cols);
+
+    return 0;
+}
+    int main() {
+    int rows, cols;
+    int matrix[10][10];
+
+    // 1. Get dimensions
+    cout << "Enter number of rows and columns: ";
+    cin >> rows >> cols;
+
+    // 2. Get matrix elements
+    cout << "Enter matrix elements:" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+    // 3. Call transpose function
+    transposeMatrix(matrix, rows, cols);
+
+    return 0;
+}
