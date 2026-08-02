@@ -57,3 +57,35 @@
 #include <iostream>
 using namespace std;
 
+#include <iostream>
+using namespace std;
+
+// PART A: Function to print multiplication table for a single number
+void printTable(int num) {
+    cout << "Multiplication Table for " << num << ":" << endl;
+    for (int i = 1; i <= 12; i++) {
+        cout << num << " x " << i << " = " << (num * i) << endl;
+    }
+    cout << endl;
+}
+
+// PART B: Function to print tables from 1 to N
+void printTablesUpToN(int n) {
+    for (int i = 1; i <= n; i++) {
+        printTable(i);
+    }
+}
+
+int main() {
+    int num;
+    cout << "Enter a number for PART A: ";
+    cin >> num;
+    printTable(num);
+
+    int maxNum;
+    cout << "Enter N for PART B (Tables 1 to N): ";
+    cin >> maxNum;
+    printTablesUpToN(maxNum);
+
+    return 0;
+}
